@@ -1,0 +1,8 @@
+FROM quay.io/modh/vllm:rhoai-2.22
+
+# Install ray
+RUN pip install ray
+
+# (Optional) install other dependencies you need
+
+CMD ["python", "-m", "vllm.entrypoints.openai.api_server"]
